@@ -1,0 +1,697 @@
+
+  body, html {
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    /*z-index: -2;*/
+  }
+  /*start menu*/
+
+  .menu-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 30px;
+    color: inherit;
+    z-index: 2;
+  }
+
+  .arrowcircle {
+    position: absolute;
+    bottom: 1%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    z-index: 3;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+    80% {
+      -webkit-transform: translateY(-20px);
+    }
+  }
+
+  .arrowbutton {
+    display: inline-block!important;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: calc(60px/12) solid #009FE3;
+    box-sizing: content-box;
+    z-index: 3;
+  }
+
+  .arrowbutton:before {
+    position: absolute;
+    content: '';
+    margin: auto;
+    width: calc(60px/3.5);
+    height: calc(60px/3.5);
+    background: rgba(0, 0, 0, 0);
+    border: calc(60px/16) solid #009FE3;
+    border-right: none;
+    border-top: none;
+    top: 0;
+    bottom: calc(60px/16);
+    left: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    box-sizing: content-box;
+    z-index: 3;
+  }
+
+  .menu>a {
+    text-decoration: none;
+    font-family: 'Yantramanav', sans-serif;
+    color: rgba(0, 159, 227, 1);
+    font-size: 20px;
+    letter-spacing: 4px;
+    width: 60px;
+    height: 35px;
+    margin: 10px;
+    border: 1px;
+  }
+  /*start slide1 bg pic*/
+
+  #slide1 {
+    background-image: url(../image/Alex.jpg);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+  }
+  /*slide1 bg pic*/
+  /*slide1 heading*/
+
+  #slide1 h1, #slide2 h2, #slide3 h4, #slide4 h5, #slide5 h6 {
+    position: relative;
+    font-size: 120px;
+    letter-spacing: 10px;
+    color: rgba(0, 159, 227, 0.5);
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    top: 40%;
+    margin: 0;
+    z-index: 1;
+  }
+  /*end slide1 heading*/
+
+  #slide2 {
+    background-image: url(../image/_MG_1314.jpg);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /*quote2*/
+    .quote2 {
+      width: 215px;
+      height: 215px;
+      background: black;
+      -webkit-border-radius: 100%;
+      margin-bottom: 25%;
+      margin-right: 25%;
+      position: absolute;
+      position: relative;
+      background-color: black;
+      animation-name: quote2;
+      animation-duration: 5s;
+      animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      float: right;
+    }
+
+    @keyframes quote2 {
+      0% {
+        left: 0px;
+      }
+      50% {
+        left: 250px;
+      }
+      100% {
+        left: 0px;
+      }
+    }
+
+    .quote2>p {
+      position: relative;
+      font-family: 'Yantramanav', sans-serif;
+      font-style: 800;
+      color: white;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 35px;
+      line-height: 120%;
+      /*z-index: 1;*/
+    }
+    /*quote2 end*/
+
+  #slide3 {
+    background-image: url(../image/_MG_0508.jpg);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+  }
+
+/*quote3*/
+  .quote3 {
+    width: 200px;
+    height: 200px;
+    background: white;
+    -webkit-border-radius: 100%;
+    margin-bottom: 25%;
+    margin-left: 15%;
+    position: absolute;
+    position: relative;
+    background-color: white;
+    animation-name: quote3;
+    animation-duration: 5s;
+    animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes quote3 {
+    0% {
+      left: 0px;
+    }
+    50% {
+      left: 250px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+
+  .quote3>p {
+    position: relative;
+    font-family: 'Yantramanav', sans-serif;
+    font-style: 800;
+    color: #009FE3;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 40px;
+    line-height: 120%;
+    z-index: 1;
+  }
+  /*quote3 end*/
+  /*slide3 end*/
+  /*Project start*/
+
+  #slide4 {
+    background-image: url(../image/3wishes.jpg);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+  }
+
+  #slide5 {
+    background-image: url(../image/_MG_7979_indian.jpg);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /*quote5*/
+    .quote5 {
+      width: 200px;
+      height: 200px;
+      background: white;
+      -webkit-border-radius: 100%;
+      margin-bottom: 25%;
+      margin-right: 25%;
+      position: absolute;
+      position: relative;
+      background-color: white;
+      animation-name: quote5;
+      animation-duration: 5s;
+      animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      float: right;
+    }
+
+    @keyframes quote5 {
+      0% {
+        left: 0px;
+      }
+      50% {
+        left: 250px;
+      }
+      100% {
+        left: 0px;
+      }
+    }
+
+    .quote5>p {
+      position: relative;
+      font-family: 'Yantramanav', sans-serif;
+      font-style: 800;
+      color: #009FE3;
+      font-size: 15px;
+      letter-spacing: 2px;
+      padding: 40px;
+      line-height: 120%;
+      z-index: 1;
+    }
+    /*quote5 end*/
+
+/*video*/
+    #video6 {
+      z-index: -4;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      background: url(image/arkiavideo.mov);
+      background-size: cover;
+
+    }
+    /*video end*/
+
+  #projects {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: auto;
+    max-height: auto;
+    align-items: center;
+ /*z-index: -3;*/
+  }
+
+  .linklocations {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    /*z-index: -2;*/
+  }
+
+  .linklocations:hover {
+    opacity: 0.3;
+  }
+
+  .linkstudio {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    /*z-index: -2;*/
+  }
+
+  .linkstudio:hover {
+    opacity: 0.3;
+  }
+
+  .linknight {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    /*z-index: -2;*/
+  }
+
+  .linknight:hover {
+    opacity: 0.3;
+  }
+
+  .linkstreet {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    /*z-index: -2;*/
+  }
+
+  .linkstreet:hover {
+    opacity: 0.3;
+  }
+
+  .linklove {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+  }
+
+  .linklove:hover {
+    opacity: 0.3;
+  }
+
+  .linkwet {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    max-width: auto;
+    max-height: auto;
+    align-items: flex-start;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    /*z-index: -1;*/
+  }
+
+  .linkwet:hover {
+    opacity: 0.3;
+  }
+
+  .arrowupcircle {
+    position: fixed;
+    bottom: 1%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    z-index: 0;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+    80% {
+      -webkit-transform: translateY(-20px);
+    }
+  }
+
+  .arrowupbutton {
+    display: inline-block!important;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: calc(60px/12) solid #009FE3;
+    box-sizing: content-box;
+    z-index: 0;
+  }
+
+  .arrowupbutton:before {
+    position: absolute;
+    content: '';
+    margin: auto;
+    width: calc(60px/3.5);
+    height: calc(60px/3.5);
+    background: rgba(0, 0, 0, 0);
+    border: calc(60px/16) solid #009FE3;
+    border-left: none;
+    border-bottom: none;
+    top: 0;
+    bottom: calc(60px/16);
+    left: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    box-sizing: content-box;
+    z-index: 0;
+  }
+  /*-------------------------------------------*/
+
+  @media screen and (min-width: 790px) {
+    .navigation {
+      display: none;
+    }
+    .logophone {
+      display: none;
+    }
+  }
+  /*iphone5 @media*/
+
+  @media screen and (max-width: 789px) {
+    /*turn offmenu-container**/
+    .menu-container {
+      display: none;
+    }
+
+    .quote2, .quote3, .quote5 {
+      display: none;
+    }
+    /*end turn off menu-container*/
+    .navigation {
+      z-index: 3;
+    }
+    /*tomlau logo*/
+    .logophone {
+      position: fixed;
+      right: 50Px;
+      top: 50px;
+      z-index: 3;
+    }
+    /*end tomlau logo*/
+    /*hamburger*/
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Libre Franklin', sans-serif;
+      font-style: 600;
+    }
+    a {
+      text-decoration: none;
+      color: #009FE3;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: tomato;
+    }
+    #menuToggle {
+      display: block;
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      z-index: 3;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    #menuToggle input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0;
+      /* hide this */
+      z-index: 2;
+      /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+    /*
+ * Just a quick hamburger
+ */
+    #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #009FE3;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #009FE3;
+    }
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked~span:nth-last-child(2) {
+      opacity: 1;
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    #menu {
+      position: absolute;
+      width: 150px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    #menu li {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+    /*
+ * And let's fade it in from the left
+ */
+    #menuToggle input:checked~ul {
+      transform: scale(1.0, 1.0);
+      opacity: 1;
+    }
+    /*end hamburger*/
+    /*turn off arrow button*/
+    .arrowcircle {
+      display: none;
+    }
+    .arrowupcircle {
+      display: none;
+    }
+    .quote3 {
+      display: none;
+    }
+    /*end turn off arrow button*/
+    /*rezize slide blue text*/
+    #slide1 h1, #slide2 h2, #slide3 h4, #slide4 h5, #slide5 h6 {
+      /*position: absolute;*/
+      font-size: 50px;
+      letter-spacing: 1px;
+      color: rgba(0, 159, 227, 0.7);
+      text-align: center;
+      font-family: 'Fredericka the Great', cursive;
+      margin: 0 auto;
+      z-index: 1;
+    }
+    /* end rezize slide blue text*/
+    /*slide  images replacement*/
+    #slide1 {
+      background-image: url(../image/Alex_centre.jpg);
+      /*position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;*/
+      /*background-attachment: fixed;*/
+      /*background-size: cover;*/
+      height: 100%;
+      z-index: 1;
+    }
+    #slide2 {
+      background-image: url(../image/grace-centre.jpg);
+      /*position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;
+      /*background-attachment: fixed;*/
+      /*background-size: cover;*/
+      height: 100%;
+      z-index: 1;
+    }
+    #slide3 {
+      background-image: url(../image/nina-centre.jpg);
+      /*position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;*/
+      /*background-attachment: fixed;*/
+      /*background-size: cover;*/
+      height: 100%;
+      z-index: 1;
+    }
+    #slide4 {
+      background-image: url(../image/3Whishez_Only1_Centre.jpg);
+      /*position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;*/
+      /*background-attachment: fixed;*/
+      /*background-size: cover;*/
+      height: 100%;
+      z-index: 1;
+    }
+    #slide5 {
+      background-image: url(../image/_MG_7979_indian_centre.jpg);
+      /*position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;*/
+      /*background-attachment: fixed;*/
+      /*background-size: cover;*/
+      height: 100%;
+      /*width: auto;*/
+      z-index: 1;
+    }
+
+}
